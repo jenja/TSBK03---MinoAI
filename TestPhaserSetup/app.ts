@@ -1,41 +1,34 @@
-﻿
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-class PhaserDemo {
+﻿module Game {
+    export class MinoAI {
 
-    game: Phaser.Game;
+        game: Phaser.Game;
 
-    constructor() {
-        this.game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload: this.preload, create: this.create });
-    }
+        constructor() {
+            this.game = new Phaser.Game(1280, 720, Phaser.AUTO, 'content', {
+                preload: this.preload, create: this.create
+            });
+        }
 
-    preload() {
-        this.game.load.image('phaser_run', 'run.png');
-    }
+        preload() {
 
-    create() {
-        this.game.add.sprite(0, 0, 'phaser_run');
+            //Load Graphics
+            this.game.load.image('phaser_run', 'run.png');
+            this.game.load.image("title", "/Graphics/StartScreen.jpg");
+        
+            //Load Sounds
+            this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
+        }
+
+        create() {
+            this.game.add.sprite(0, 0, 'phaser_run');
+            this.game.state.add("TitleScreenState",
+                StartScreenM.TitleScreenState, true);
+
+            this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        }
     }
 }
 
 window.onload = () => {
-    var game = new PhaserDemo();
-};
+    var game = new Game.MinoAI();
+    };
