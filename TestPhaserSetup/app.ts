@@ -12,17 +12,19 @@
         preload() {
 
             //Load Graphics
-            this.game.load.image('phaser_run', 'run.png');
             this.game.load.image("title", "/Graphics/StartScreen.jpg");
+            this.game.load.image("player", "/Graphics/playerSprite.png");
         
             //Load Sounds
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
         }
 
         create() {
-            this.game.add.sprite(0, 0, 'phaser_run');
             this.game.state.add("TitleScreenState",
                 StartScreenM.TitleScreenState, true);
+
+            this.game.state.add("InGameState",
+                InGame.GamePlayState, false);
 
             this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         }
