@@ -18,6 +18,11 @@ var StartScreenM;
             this.music.volume = 0.1;
             this.music.loop = true;
             this.music.play();
+            this.input.onTap.addOnce(this.StartGame, this);
+        };
+        TitleScreenState.prototype.StartGame = function () {
+            this.music.stop();
+            this.game.state.start("InGameState");
         };
         return TitleScreenState;
     })(Phaser.State);

@@ -15,9 +15,9 @@ var Game;
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
         };
         MinoAI.prototype.create = function () {
+            this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             this.game.state.add("TitleScreenState", StartScreenM.TitleScreenState, true);
             this.game.state.add("InGameState", InGame.GamePlayState, false);
-            this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         };
         return MinoAI;
     })();

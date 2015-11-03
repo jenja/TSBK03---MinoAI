@@ -12,7 +12,7 @@ var InGame;
             _super.call(this);
         }
         GamePlayState.prototype.create = function () {
-            this.player = new InGame.Player(this.game, this.game.width / 2, this.game.height / 2);
+            this.player = new InGame.Player(this.game, 10, 10);
             this.game.add.existing(this.player);
         };
         return GamePlayState;

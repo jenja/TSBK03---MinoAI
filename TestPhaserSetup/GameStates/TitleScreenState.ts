@@ -15,6 +15,13 @@
             this.music.loop = true;
             this.music.play();
 
+            this.input.onTap.addOnce(this.StartGame, this);
         }
+
+        StartGame() {
+            this.music.stop();
+            this.game.state.start("InGameState");
+        }
+
     }
 }
