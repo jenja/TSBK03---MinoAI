@@ -1,0 +1,5 @@
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TestPhaserSetup\TestPhaserSetup\bin\TestPhaserSetup.dll.config
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TestPhaserSetup\TestPhaserSetup\bin\TestPhaserSetup.dll
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TestPhaserSetup\TestPhaserSetup\bin\TestPhaserSetup.pdb
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TestPhaserSetup\TestPhaserSetup\obj\Debug\TestPhaserSetup.dll
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TestPhaserSetup\TestPhaserSetup\obj\Debug\TestPhaserSetup.pdb
