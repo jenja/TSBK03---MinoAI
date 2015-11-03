@@ -1,28 +1,22 @@
-﻿class Greeter {
-    element: HTMLElement;
-    span: HTMLElement;
-    timerToken: number;
+﻿module Game {
+    export class MinoAI {
+        game: Phaser.Game;
 
-    constructor(element: HTMLElement) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+        constructor() {
+            this.game = new Phaser.Game(1280, 720, Phaser.AUTO, 'content', {
+                create: this.create, preload: this.preload
+            });
+        }
+
+        preload() {
+        }
+
+        create() {
+        }
     }
-
-    start() {
-        this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
-    }
-
-    stop() {
-        clearTimeout(this.timerToken);
-    }
-
 }
 
+//Syntext for Anonymous function
 window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
+    var game = new Game.MinoAI();
 };

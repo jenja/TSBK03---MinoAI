@@ -1,0 +1,6 @@
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\bin\MinoAI.dll.config
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\bin\MinoAI.dll
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\bin\MinoAI.pdb
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\obj\Debug\MinoAI.csprojResolveAssemblyReference.cache
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\obj\Debug\MinoAI.dll
+C:\Users\Jens\Documents\Skola\TSBK03\TSBK03---MinoAI\MinoAI\obj\Debug\MinoAI.pdb
