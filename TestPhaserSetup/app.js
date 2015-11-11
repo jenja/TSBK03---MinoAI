@@ -11,6 +11,7 @@ var Game;
             this.game.load.image("title", "/Graphics/StartScreen.jpg");
             this.game.load.image("player", "/Graphics/playerSprite.png");
             this.game.load.image("player", "/Graphics/World_Chest.png");
+            this.game.load.image("collider", "/Graphics/colliderSprite.png");
             //Load Sounds
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
         };
@@ -20,9 +21,9 @@ var Game;
             //----------------------------------------------------
             //Add the different stats the game will have
             //Titlescreen state
-            this.game.state.add("TitleScreenState", StartScreenM.TitleScreenState, true);
+            this.game.state.add("TitleScreenState", StartScreenM.TitleScreenState, false);
             //Game state
-            this.game.state.add("InGameState", InGame.GamePlayState, false);
+            this.game.state.add("InGameState", InGame.GamePlayState, true);
         };
         return MinoAI;
     })();

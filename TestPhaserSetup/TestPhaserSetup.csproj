@@ -20,9 +20,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="Graphics\colliderSprite.png" />
     <Content Include="Graphics\playerSprite.png" />
     <Content Include="Graphics\StartScreen.jpg" />
     <Content Include="index.html" />
+    <Content Include="one way collision.js" />
     <Content Include="phaser.js" />
     <Content Include="phaser.min.js" />
     <Content Include="Sound\Cow.mp3" />
@@ -30,6 +32,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="GameObjects\Collider.ts" />
     <TypeScriptCompile Include="GameObjects\Player.ts" />
     <TypeScriptCompile Include="GameObjects\Wall.ts" />
     <TypeScriptCompile Include="GameStates\GamePlayState.ts" />

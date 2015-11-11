@@ -20,7 +20,7 @@
         constructor(game: Phaser.Game, x: number, y: number) {
 
             this.game = game;
-            this.walkingSpeed = 5;
+            this.walkingSpeed = 200;
             this.walkingSpeedX = 0;
             this.walkingSpeedY = 0;
 
@@ -53,11 +53,13 @@
             else
                 this.walkingSpeedX = 0;
 
-            //update position
-            this.x += this.walkingSpeedX;// * (60 / this.game.time.elapsedMS); //rhe latter causes sprite to disapear
-            this.y += this.walkingSpeedY;// * (60 / this.game.time.elapsedMS);
-        } 
+            this.body.velocity.x = this.walkingSpeedX;
+            this.body.velocity.y = this.walkingSpeedY;
 
+            //update position (Replace translation with velocity in order to collide)
+            //this.x += this.walkingSpeedX;// * (60 / this.game.time.elapsedMS); //rhe latter causes sprite to disapear
+            //this.y += this.walkingSpeedY;// * (60 / this.game.time.elapsedMS);
+        } 
     }
 }
 

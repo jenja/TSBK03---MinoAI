@@ -14,3 +14,4 @@ C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\bin\Te
 C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\bin\TestPhaserSetup.pdb
 C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\obj\Debug\TestPhaserSetup.dll
 C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\obj\Debug\TestPhaserSetup.pdb
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\obj\Debug\TestPhaserSetup.csprojResolveAssemblyReference.cache
