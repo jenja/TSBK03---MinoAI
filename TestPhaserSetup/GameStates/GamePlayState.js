@@ -14,7 +14,7 @@ var InGame;
         GamePlayState.prototype.create = function () {
             // Start arcade physics
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
-            //create player object -------------------------------------------------------------------
+            //create PLAYER object -------------------------------------------------------------------
             this.player = new InGame.Player(this.game, 10, 10);
             //add physics for player object
             this.game.physics.enable(this.player, Phaser.Physics.ARCADE);
@@ -22,7 +22,14 @@ var InGame;
             //Add gameobject to scene
             this.game.add.existing(this.player);
             //----------------------------------------------------------------------------------------
-            //create collider object -----------------------------------------------------------------
+            //create MINOTAUR object -----------------------------------------------------------------
+            this.minotaur = new InGame.Minotaur(this.game, this.game.width / 2, this.game.height / 2, this.player);
+            //add physics for game object
+            this.game.physics.enable(this.minotaur, Phaser.Physics.ARCADE);
+            //Add gameobject to scene
+            this.game.add.existing(this.minotaur);
+            //----------------------------------------------------------------------------------------
+            //create COLLIDER object -----------------------------------------------------------------
             this.collider = new InGame.Collider(this.game, 150, 150);
             //add physics for the game object
             this.game.physics.enable(this.collider, Phaser.Physics.ARCADE);
@@ -34,6 +41,8 @@ var InGame;
         GamePlayState.prototype.update = function () {
             //check collision between player object and collider object
             this.game.physics.arcade.collide(this.player, this.collider);
+            this.game.physics.arcade.collide(this.minotaur, this.collider);
+            this.game.physics.arcade.collide(this.player, this.minotaur);
         };
         return GamePlayState;
     })(Phaser.State);

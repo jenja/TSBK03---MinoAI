@@ -3,8 +3,7 @@
     export class GamePlayState extends Phaser.State {
         game: Phaser.Game;
         player: InGame.Player;
-
-        //tests
+        minotaur: InGame.Minotaur;
         collider: InGame.Collider;
 
         constructor() {
@@ -16,7 +15,7 @@
             // Start arcade physics
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
 
-            //create player object -------------------------------------------------------------------
+            //create PLAYER object -------------------------------------------------------------------
             this.player = new Player(this.game, 10 /*this.game.width/2*/ , 10 /*this.game.height/2*/);
 
             //add physics for player object
@@ -27,7 +26,17 @@
             this.game.add.existing(this.player);
             //----------------------------------------------------------------------------------------
 
-            //create collider object -----------------------------------------------------------------
+            //create MINOTAUR object -----------------------------------------------------------------
+            this.minotaur = new Minotaur(this.game, this.game.width/2, this.game.height/2, this.player);
+
+            //add physics for game object
+            this.game.physics.enable(this.minotaur, Phaser.Physics.ARCADE);
+
+            //Add gameobject to scene
+            this.game.add.existing(this.minotaur);
+            //----------------------------------------------------------------------------------------
+
+            //create COLLIDER object -----------------------------------------------------------------
             this.collider = new Collider(this.game, 150, 150);
 
             //add physics for the game object
@@ -43,6 +52,8 @@
 
             //check collision between player object and collider object
             this.game.physics.arcade.collide(this.player, this.collider);
+            this.game.physics.arcade.collide(this.minotaur, this.collider);
+            this.game.physics.arcade.collide(this.player, this.minotaur);
 
         }
     }

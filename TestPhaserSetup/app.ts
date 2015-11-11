@@ -15,6 +15,7 @@
             this.game.load.image("title", "/Graphics/StartScreen.jpg");
             this.game.load.image("player", "/Graphics/playerSprite.png");
             this.game.load.image("collider", "/Graphics/colliderSprite.png");
+            this.game.load.image("minotaur", "/Graphics/minotaurSprite.png");
         
             //Load Sounds
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
