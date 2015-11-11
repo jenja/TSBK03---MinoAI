@@ -31,6 +31,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="GameObjects\Player.ts" />
+    <TypeScriptCompile Include="GameObjects\Wall.ts" />
     <TypeScriptCompile Include="GameStates\GamePlayState.ts" />
     <TypeScriptCompile Include="GameStates\TitleScreenState.ts" />
     <TypeScriptCompile Include="p2.d.ts" />

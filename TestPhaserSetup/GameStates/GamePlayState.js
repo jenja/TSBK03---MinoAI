@@ -13,6 +13,8 @@ var InGame;
         GamePlayState.prototype.create = function () {
             this.player = new InGame.Player(this.game, 10 /*this.game.width/2*/, 10 /*this.game.height/2*/);
             this.game.add.existing(this.player);
+            //this.wall = new Wall(this.game, 2, 2);
+            //this.game.add.existing(this.wall);
         };
         return GamePlayState;
     })(Phaser.State);
