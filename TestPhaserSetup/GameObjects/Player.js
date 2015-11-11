@@ -1,7 +1,8 @@
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    __.prototype = b.prototype;
+    d.prototype = new __();
 };
 var InGame;
 (function (InGame) {
@@ -15,7 +16,7 @@ var InGame;
         //public static MAX_SPEED: number = 30;
         function Player(game, x, y) {
             this.game = game;
-            this.walkingSpeed = 5;
+            this.walkingSpeed = 200;
             this.walkingSpeedX = 0;
             this.walkingSpeedY = 0;
             //Wire up input handlers
@@ -41,9 +42,11 @@ var InGame;
                 this.walkingSpeedX = this.walkingSpeed;
             else
                 this.walkingSpeedX = 0;
-            //update position
-            this.x += this.walkingSpeedX; // * (60 / this.game.time.elapsedMS); //rhe latter causes sprite to disapear
-            this.y += this.walkingSpeedY; // * (60 / this.game.time.elapsedMS);
+            this.body.velocity.x = this.walkingSpeedX;
+            this.body.velocity.y = this.walkingSpeedY;
+            //update position (Replace translation with velocity in order to collide)
+            //this.x += this.walkingSpeedX;// * (60 / this.game.time.elapsedMS); //rhe latter causes sprite to disapear
+            //this.y += this.walkingSpeedY;// * (60 / this.game.time.elapsedMS);
         };
         return Player;
     })(Phaser.Sprite);

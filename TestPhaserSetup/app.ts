@@ -14,6 +14,7 @@
             //Load Graphics
             this.game.load.image("title", "/Graphics/StartScreen.jpg");
             this.game.load.image("player", "/Graphics/playerSprite.png");
+            this.game.load.image("collider", "/Graphics/colliderSprite.png");
         
             //Load Sounds
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
@@ -24,10 +25,10 @@
             this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
             this.game.state.add("TitleScreenState",
-                StartScreenM.TitleScreenState, true);
+                StartScreenM.TitleScreenState, false);
 
             this.game.state.add("InGameState",
-                InGame.GamePlayState, false);
+                InGame.GamePlayState, true);
 
             
         }

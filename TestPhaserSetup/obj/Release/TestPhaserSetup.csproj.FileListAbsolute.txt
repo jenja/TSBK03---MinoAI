@@ -1,0 +1,5 @@
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\bin\TestPhaserSetup.dll.config
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\bin\TestPhaserSetup.dll
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\bin\TestPhaserSetup.pdb
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\obj\Release\TestPhaserSetup.dll
+C:\Users\Tobias\Desktop\Projekt\MT\TSBK03\TSBK03---MinoAI\TestPhaserSetup\obj\Release\TestPhaserSetup.pdb
