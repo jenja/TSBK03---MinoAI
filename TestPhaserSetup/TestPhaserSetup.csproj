@@ -21,6 +21,7 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="Graphics\colliderSprite.png" />
+    <Content Include="Graphics\minotaurSprite.png" />
     <Content Include="Graphics\playerSprite.png" />
     <Content Include="Graphics\StartScreen.jpg" />
     <Content Include="index.html" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="GameObjects\Collider.ts" />
+    <TypeScriptCompile Include="GameObjects\Minotaur.ts" />
     <TypeScriptCompile Include="GameObjects\Player.ts" />
     <TypeScriptCompile Include="GameObjects\Wall.ts" />
     <TypeScriptCompile Include="GameStates\GamePlayState.ts" />
