@@ -5,14 +5,31 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var InGame;
 (function (InGame) {
+    //Global variables...
+    var map;
+    var layer;
+    var blayer;
     var GamePlayState = (function (_super) {
         __extends(GamePlayState, _super);
+        //var map;
         function GamePlayState() {
+            //this.map = map;
+            //this.layer = layer;
             _super.call(this);
         }
         GamePlayState.prototype.create = function () {
             // Start arcade physics
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
+            //add the tilemap, the parameter is the key for the json file
+            map = this.game.add.tilemap('level1');
+            //First parameter is the tileset name as specified in Tiled, the second it the key to the asset
+            map.addTilesetImage('kenney_16x16', 'tiles');
+            //Create the layers you specified in Tiled, do this for each layer
+            layer = map.createLayer('backgroundLayer');
+            blayer = map.createLayer('blockLayer');
+            //map.setCollisionBetween(1, 2000, true, 'blockLayer');
+            //resizes the game world to match the layer dimensions
+            layer.resizeWorld();
             //create PLAYER object -------------------------------------------------------------------
             this.player = new InGame.Player(this.game, 10 /*this.game.width/2*/, 10 /*this.game.height/2*/);
             //add physics for player object

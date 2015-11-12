@@ -18,7 +18,10 @@
             this.game.load.image("player", "/Graphics/World_Chest.png");
             this.game.load.image("collider", "/Graphics/colliderSprite.png");
             this.game.load.image("minotaur", "/Graphics/minotaurSprite.png");
-        
+
+            this.game.load.tilemap('level1', '/Graphics/mapT.json', null, Phaser.Tilemap.TILED_JSON);
+            this.game.load.image('tiles', '/Graphics/kenney_16x16.png');
+
             //Load Sounds
             this.game.load.audio("TitleSong", "/Sound/Cow.mp3");
         }

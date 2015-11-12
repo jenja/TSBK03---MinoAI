@@ -1,8 +1,12 @@
 ﻿module InGame {
 
+    //Global variables...
+    var map;
+    var layer;
+    var blayer;
+
     export class GamePlayState extends Phaser.State {
         game: Phaser.Game;
-
 
         player: InGame.Player
         wall: InGame.Wall;
@@ -10,7 +14,15 @@
         minotaur: InGame.Minotaur;
         collider: InGame.Collider;
 
-        constructor() {
+        map1: Phaser.Game;
+
+        //var map;
+
+        constructor(/*map: Phaser.Game, layer: Phaser.Game, x: number, y: number, _player: Player*/) {
+
+            //this.map = map;
+            //this.layer = layer;
+
             super();
         }
 
@@ -18,6 +30,21 @@
 
             // Start arcade physics
             this.game.physics.startSystem(Phaser.Physics.ARCADE);
+
+            //add the tilemap, the parameter is the key for the json file
+            map = this.game.add.tilemap('level1');
+
+            //First parameter is the tileset name as specified in Tiled, the second it the key to the asset
+            map.addTilesetImage('kenney_16x16', 'tiles');
+
+            //Create the layers you specified in Tiled, do this for each layer
+            layer = map.createLayer('backgroundLayer');
+            blayer = map.createLayer('blockLayer');
+
+            //map.setCollisionBetween(1, 2000, true, 'blockLayer');
+
+            //resizes the game world to match the layer dimensions
+            layer.resizeWorld();
 
             //create PLAYER object -------------------------------------------------------------------
             this.player = new Player(this.game, 10 /*this.game.width/2*/ , 10 /*this.game.height/2*/);

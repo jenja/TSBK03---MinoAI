@@ -21,9 +21,11 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="Graphics\colliderSprite.png" />
+    <Content Include="Graphics\kenney_16x16.png" />
     <Content Include="Graphics\minotaurSprite.png" />
     <Content Include="Graphics\playerSprite.png" />
     <Content Include="Graphics\StartScreen.jpg" />
+    <Content Include="Graphics\World_Chest.png" />
     <Content Include="index.html" />
     <Content Include="one way collision.js" />
     <Content Include="phaser.js" />
@@ -44,6 +46,7 @@
     <TypeScriptCompile Include="pixi.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Graphics\mapT.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
